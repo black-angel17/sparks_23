@@ -62,6 +62,16 @@
 				
 			</div>
 		</div>
+		
+		<script type="text/javascript">
+			// Reload the page when the user navigates back to it
+			window.addEventListener('pageshow', function (event) {
+				// Check if the page is in the history and is being restored (navigated back to)
+				if (event.persisted) {
+					location.reload();
+				}
+			});
+		</script>
 		<script>
 			function createMemberFields() {
 				const numMembers = parseInt(document.getElementById("numMembers").value);
