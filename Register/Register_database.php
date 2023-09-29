@@ -36,69 +36,34 @@ public static function insert_data($team_name,$team_id,$member1,$member2,$member
 
 }
 
+public static function update_db(){
+        
+  if (Database::$connection->connect_error) {
+      die("Connection failed: ". Database::$connection->connect_error);
+    } 
+    else{
+    $sql ="SELECT * FROM `register` ";
+    $result = Database::$connection->query($sql);
+     print("it has retuned");
+    return $result;
+    
+        //it retunr a row 
 
+      //   if ($row["email"]== $name and $row['password'] ==$pass ) {
+      //     echo print("\t\t\tUSER IS FOUND\t\t\t\t");
+      //     return true;
+      //   }
+      //   else{
+      //     print("PASSWORD Mismatched");
+      //   }  
 
-
-
-
+      // }
+      
+    //Database::$connection->close();
+    }
 
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 ?>
