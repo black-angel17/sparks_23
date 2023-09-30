@@ -78,7 +78,7 @@
             <div class="input-group-prepend">
               <span class="input-group-text">@</span>
             </div>
-            <input type="text" class="form-control" id="username" placeholder=" Enter Team_Name" required>
+            <input type="text" class="form-control" id="username" placeholder=" Enter Team_Name"  name = "team_name" required>
             <div class="invalid-feedback" style="width: 100%;">
               Your username is required.
             </div>
@@ -90,49 +90,45 @@
             <div class="input-group-prepend">
               <span class="input-group-text">@</span>
             </div>
-            <input type="text" class="form-control" id="username" placeholder=" Enter 5 digit only" required>
+            <input type="text" class="form-control" id="username" name = "team_id" placeholder=" Enter 5 digit only" required>
             <div class="invalid-feedback" style="width: 100%;">
               Your username is required.
             </div>
           </div>
         </div>
 
-        <div class="mb-3">
-          <label for="email">Email <span class="text-muted"></span></label>
-          <input type="email" class="form-control" id="email" placeholder="you@example.com">
-          <div class="invalid-feedback">
-            Please enter a valid email address.
-          </div>
-        </div>
-
+        
        
 
         <div class="row">
           <div class="col-md-5 mb-3">
             <label for="country">Department</label>
-            <select class="custom-select d-block w-100" id="college" required>
-              <option value="">Choose...</option>
-              <option>CSE</option>
-              <option>ADS</option>
-              <option>AI/ML</option>
-              <option>IT</option>
-              <option>MECH</option>
-              <option>ECE</option>
-              <option>EEE</option>
+            <select class="custom-select d-block w-100" id="college" name="Department" required>
+              <option >Choose...</option>
+              <option value="CSE">CSE</option>
+              <option value="ADS">ADS</option>
+              <option value="AI/M">AI/ML</option>
+              <option value="IT">IT</option>
+              <option value="MECH">MECH</option>
+              <option value="ECE">ECE</option>
+              <option value="EEE">EEE</option>
             </select>
             <div class="invalid-feedback">
               Please select a valid Department
 
             </div>
           </div>
+          
+
+
           <div class="col-md-4 mb-3">
             <label for="state">Year</label>
-            <select class="custom-select d-block w-100" id="year" required>
-              <option value="">Choose...</option>
-              <option>First Year</option>
-              <option>Second Year</option>
-              <option>Third Year</option>
-              <option>Final Year</option>
+            <select class="custom-select d-block w-100" id="year" name = "Year" required>
+              <option>Choose...</option>
+              <option value="First Year">First Year</option>
+              <option value="Second Year">Second Year</option>
+              <option value="Third Year">Third Year</option>
+              <option value="Final Year">Final Year</option>
             </select>
             <div class="invalid-feedback">
               Please select a valid year
@@ -140,7 +136,7 @@
           </div>
           <div class="col-md-3 mb-3">
             <label for="dept">Phone</label>
-            <input type="number" class="form-control" id="phone" placeholder="Enter Number" required>
+            <input type="number" class="form-control" id="phone" placeholder="Enter Number"  name = "phone"required>
             <div class="invalid-feedback">
               Numebr is required
             </div>
