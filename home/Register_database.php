@@ -64,6 +64,34 @@ public static function update_db(){
 
 
 }
+public static function upd_db(){
+        
+  if (Database::$connection->connect_error) {
+      die("Connection failed: ". Database::$connection->connect_error);
+    } 
+    else{
+    $sql ="SELECT * FROM `register` ORDER BY `scores` DESC ";
+    $result = Database::$connection->query($sql);
+     print("it has retuned");
+    return $result;
+    
+        //it retunr a row 
+
+      //   if ($row["email"]== $name and $row['password'] ==$pass ) {
+      //     echo print("\t\t\tUSER IS FOUND\t\t\t\t");
+      //     return true;
+      //   }
+      //   else{
+      //     print("PASSWORD Mismatched");
+      //   }  
+
+      // }
+      
+    //Database::$connection->close();
+    }
+
+
+}
 
 }
 ?>

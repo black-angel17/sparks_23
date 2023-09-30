@@ -1,4 +1,4 @@
-<?php include '../Register/Register_database.php'; 
+<?php include '../home/Register_database.php'; 
 
 
 	Database::make_conn();
@@ -45,18 +45,19 @@
 						  </thead>
 						  <tbody>
 						  <?php //if ($result->num_rows > 0 ) ?> 
-						  <?php $result = Database::update_db(); 
+						  <?php $result = Database::upd_db();
+						  $count = 1; 
 						  while ($row = $result->fetch_assoc()) {
 
 						  ?>
 						  <tr class="alert" role="alert">
-						      <th scope="row"><?php print $row['rank']?></th>
+						      <th scope="row" style="font-size: xx-large;"><?php print $count ;?></th>
 							  <td><?php print $row['team_id']?></td>
 						      <td><?php print $row['team_name']?></td>
 						      <td><?php print $row['year']?></td>
 							  <td><?php print $row['department']?></td>
 							  <td><?php print $row['scores']?></td>
-						    </tr> <?php } ?>
+						    </tr> <?php $count++; } ?>
 
 						  
 						  </tbody>
