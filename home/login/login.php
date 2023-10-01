@@ -29,6 +29,9 @@ if ($result){
     print("\nLogin sucess");
     Session::set('is_loggedin',true);
     Session::set('team_id',$_POST['user']);
+    if (!isset($_SESSION['countdown_time'])) {
+        $_SESSION['countdown_time'] = '3600'; // Initial countdown time
+      }
     header("Location: ../index.php");
 
 }else{

@@ -30,7 +30,12 @@ $tname =Database::get_tname($_SESSION['team_id']);
     
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/font-hack/2.020/css/hack.min.css">
-    
+    <style>
+        .countdown {
+            font-size: 5em;
+            text-align: center;
+        }
+    </style>
   </head>
   <body>
 
@@ -97,8 +102,8 @@ $tname =Database::get_tname($_SESSION['team_id']);
           <div class="container py-5">
           <br><br><br>
           <div class="col-xl-6">
-              <h1 class="display-3">TIME Remaining:<span class="vim-caret">͏͏&nbsp;</span></h1>
-              <div class="lead mb-3 text-mono text-success" style="font-size: 5em;"> <br> 60:00
+              <h1 class="display-3">TIME Remaining:<span class="vim-caret">͏͏&nbsp;</span></h1><br><br>
+              <div class="lead mb-3 text-mono text-success"  class="countdown" id="demo" style="font-size: 5em;"> <br><br> 
               </div>
              
        
@@ -154,7 +159,23 @@ $tname =Database::get_tname($_SESSION['team_id']);
             </div>
         </div>
     </section>
+    <script>
+function sendAndReceiveData() {
 
+  var fname = "Jodhn";
+  var lname = "Doe";
+  var url = "countdown.php?fname=" + fname + "&lname=" + lname;
+
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    document.getElementById("demo").innerHTML = this.responseText;
+  }
+  xhttp.open("GET", url);
+  xhttp.send();
+}
+setInterval(sendAndReceiveData, 1000);
+
+</script>
     
   
    
@@ -167,9 +188,10 @@ $tname =Database::get_tname($_SESSION['team_id']);
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     <script src="assets/js/flipclock.min.js"></script>
-  
+    
     <script src="assets/js/particles.js"></script>
     <script src="assets/js/app.js"></script>
+   
   </body>
 </html>
 

@@ -314,6 +314,18 @@ $result3 = Database::Checker($_SESSION['team_id'],$q3);
     $('#collapse3').collapse('show');
   });
 </script>
+<script>
+  function sendAndReceiveData() {
+  
+    var fname = "Jodhn";
+    var lname = "Doe";
+    var url = "countdown.php?fname=" + fname + "&lname=" + lname;
+    const xhttp = new XMLHttpRequest();
+    xhttp.open("GET", url);
+    xhttp.send();
+  }
+  setInterval(sendAndReceiveData, 1000);
+  </script>
     
 
 

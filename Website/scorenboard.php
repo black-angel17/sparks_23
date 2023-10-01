@@ -57,7 +57,7 @@
                             <thead class="particles-js-canvas-el">
                                 <tr>
                                     <th>NO</th>
-                                    <th>Team ID</th>
+                                   
                                     <th>Team Name</th>
                                     <th>Year</th>
                                     <th>Dept</th>
@@ -74,7 +74,7 @@
 						  ?>
 						  <tr class="lead mb-3 text-mono text-success" style="color: chartreuse;" role="alert">
 						      <th scope="row "  class="alert" style="color: white;"  ><?php print $count ;?></th>
-							  <td><?php print $row['team_id']?></td>
+							  
 						      <td><?php print $row['team_name']?></td>
 						      <td><?php print $row['year']?></td>
 							  <td><?php print $row['department']?></td>
@@ -87,6 +87,19 @@
             </div>
         </div>
     </section>
+    <script>
+  function sendAndReceiveData() {
+  
+    var fname = "Jodhn";
+    var lname = "Doe";
+    var url = "../home/countdown.php?fname=" + fname + "&lname=" + lname;
+    const xhttp = new XMLHttpRequest();
+    xhttp.open("GET", url);
+    xhttp.send();
+  }
+  setInterval(sendAndReceiveData, 1000);
+  </script>
+   
 
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.js"></script>
