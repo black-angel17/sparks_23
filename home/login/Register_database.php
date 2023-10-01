@@ -1,6 +1,6 @@
 <?php 
 
-class Database{
+class Databases{
 
 public static $connection;
 
@@ -13,8 +13,8 @@ public static function make_conn(){
     $dbname = "test";
 
 $conn = new mysqli($servername, $username, $passwor, $dbname);
-Database::$connection = $conn;
-return Database::$connection;
+Databases::$connection = $conn;
+return Databases::$connection;
 
 }
 
@@ -24,12 +24,12 @@ public static function insert_data($team_name,$team_id,$member1,$member2,$member
     $sql = "INSERT INTO `register` (`team_name`,`team_id`,`member1`,`member2`,`member3`,`department`,`year`,`phone`)
     VALUES ('$team_name','$team_id','$member1','$member2','$member3','$department','$year','$phone');";
     
-    if (Database::$connection->query($sql) === TRUE) {
+    if (Databases::$connection->query($sql) === TRUE) {
      echo "\n\nNew record created successfully";
      return True;
 
    } else {
-      return "Error: " . $sql . "<br>" . Database::$connection->error;
+      return "Error: " . $sql . "<br>" . Databases::$connection->error;
       
     }
     
@@ -38,12 +38,12 @@ public static function insert_data($team_name,$team_id,$member1,$member2,$member
 
 public static function update_db(){
         
-  if (Database::$connection->connect_error) {
-      die("Connection failed: ". Database::$connection->connect_error);
+  if (Databases::$connection->connect_error) {
+      die("Connection failed: ". Databases::$connection->connect_error);
     } 
     else{
     $sql ="SELECT * FROM `register` ";
-    $result = Database::$connection->query($sql);
+    $result = Databases::$connection->query($sql);
      print("it has retuned");
     return $result;
     
@@ -66,13 +66,13 @@ public static function update_db(){
 }
 public static function upd_db(){
         
-  if (Database::$connection->connect_error) {
-      die("Connection failed: ". Database::$connection->connect_error);
+  if (Databases::$connection->connect_error) {
+      die("Connection failed: ". Databases::$connection->connect_error);
     } 
     else{
     $sql ="SELECT * FROM `register` ORDER BY `scores` DESC ";
-    $result = Database::$connection->query($sql);
-     print("it has retuned");
+    $result = Databases::$connection->query($sql);
+     
     return $result;
     
         //it retunr a row 
