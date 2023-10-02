@@ -161,7 +161,7 @@ class Database{
 
 
 
-              $update = "INSERT INTO `updater`( `finish_lvl`, `team_id`, `point`) VALUES ('$qnum','$id','$point');";
+              $update = "INSERT INTO `updater`( `finish_lvl`, `team_id`, `point`,`time`) VALUES ('$qnum','$id','$point',CURRENT_TIME());";
               Database::$connection->query($update);
               return true;
               }

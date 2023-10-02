@@ -133,6 +133,7 @@ $tname =Database::get_tname($_SESSION['team_id']);
                                     <th>Team Name</th>
                                     <th>level_completed</th>
                                     <th>Points</th>
+                                    <th>Completed_time</th>
                                     
                                     <th>&nbsp;</th>
                                 </tr>
@@ -150,6 +151,7 @@ $tname =Database::get_tname($_SESSION['team_id']);
                 <td><?php print ($tname) ?></td>
 						      <td><?php print $row['finish_lvl']?></td>
 						      <td><?php print $row['point']?></td>
+                  <td><?php print $row['time']?></td>
 							  
 						    </tr> <?php $count++; } ?>>
                             </tbody>

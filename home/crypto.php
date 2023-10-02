@@ -85,17 +85,14 @@ $result3 = Database::Checker($_SESSION['team_id'],$q3);
                                   0x03 
                                 </h4>
                                 <h4 class="panel-title">
-                                    90 points 
+                                    30 points 
                                   </h4>
                                 
                               </a>
                              
                             </div>
                             <div id="collapse1" class="panel-collapse collapse in">
-                              <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                              minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                              commodo consequat
+                              <div class="panel-body">RansomWare Attacks been happening....
                                 <br>
                                 <br>
                                 <?php if($result1){ ?>
@@ -110,7 +107,7 @@ $result3 = Database::Checker($_SESSION['team_id'],$q3);
                                 <div class="row justify-content-between">
 
                                   <div class="col-xl-12 align-self-center">
-                                      <a href="#!" class="btn btn-shadow text-mono btn-outline-success">Download</a>
+                                      <a href="../home/challenges/0x03.html" class="btn btn-shadow text-mono btn-outline-success">Go there</a>
                                       <button type="button" class="btn btn-shadow btn-outline-success" data-toggle="modal" data-target="#hint1"><span class="far fa-lightbulb mr-2"></span>Get HINT</button>
                                   </div>
                                   <br>
@@ -121,7 +118,7 @@ $result3 = Database::Checker($_SESSION['team_id'],$q3);
                                       <input type="text" style="margin-left: 40px;" class="form-control" placeholder="Enter Flag" aria-label="Enter Flag"aria-describedby="basic-addon2" name="flag">
                                       <input type="hidden" name="qnum" value="0x03">
                                       <div class="input-group-append">
-                                        <button class="btn btn-outline-success" type="button">GO!</button>
+                                        <button class="btn btn-outline-success" type="submit">GO!</button>
                                        
                                       </div> 
                                     </div>  </form>

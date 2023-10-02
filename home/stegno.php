@@ -86,7 +86,7 @@ $result3 = Database::Checker($_SESSION['team_id'],$q3);
                                   0x02 
                                 </h4>
                                 <h4 class="panel-title">
-                                    100 points 
+                                    50 points 
                                   </h4>
                                 
                               </a>

@@ -5,6 +5,7 @@ include_once '../home/db/session.class.php';
 session::start();
 
 if (($_SESSION['countdown_time'] > 0 )) {
+  sleep(1);
     
   $seconds =$_SESSION['countdown_time'] = $_SESSION['countdown_time'] -1;
 // Change this to your desired number of seconds
@@ -16,6 +17,7 @@ $remainingSeconds = $seconds % 60;
 // Display the result
 
 echo " $minutes:$remainingSeconds ";
+
 
 
 }if ($_SESSION['countdown_time'] == 0 ){
